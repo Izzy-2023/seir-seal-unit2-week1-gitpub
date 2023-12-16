@@ -12,8 +12,15 @@ const express = require("express")
 //**************************** */
 
 // express(): returns an express application object
-
 const app = express()
+
+// *******************************
+// Import Drinks
+// *******************************
+
+// import our drinks
+// require will return the value of module.exports
+const drinks = require("./models/drinks")
 
 //*****************************
 // ROUTES
@@ -28,6 +35,9 @@ app.get("/", (req, res) => {
     res.send("<h1>Welcome to the Gitpub App!</h1>")
 })
 
+app.get("/drinks", (req, res) => {
+    res.send(drinks)
+})
 
 // *****************************
 // TURNING ON SERVER LISTENER
