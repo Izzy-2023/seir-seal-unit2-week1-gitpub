@@ -48,9 +48,10 @@ app.get("/drinks", (req, res) => {
   });
 
   app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
+    const drinkIndex = req.params.id;
+    const selectedDrink = drinks[drinkIndex];
+    res.send(`The array position corresponding to the drink is ${drinkIndex}`);
   })
-
 
 // *****************************
 // TURNING ON SERVER LISTENER
