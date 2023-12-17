@@ -47,11 +47,12 @@ app.get("/drinks", (req, res) => {
     res.render("index", { drinks: capitalizedDrinks }); 
   });
 
-  app.get("/drinks/:id", (req, res) => {
+  app.get('/drinks/:id', (req, res) => {
     const drinkIndex = req.params.id;
     const selectedDrink = drinks[drinkIndex];
-    res.send(`The array position corresponding to the drink is ${drinkIndex}`);
-  })
+    // Pass selected drink data to show.ejs
+    res.render('show', { drink: selectedDrink }); 
+  });
 
 // *****************************
 // TURNING ON SERVER LISTENER

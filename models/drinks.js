@@ -1,43 +1,43 @@
 const drinks = [
     {
       name: 'cruddy mary',
-      price: 132,
-      image: 'https://imgur.com/Va5iIw5'
+      price: 35,
+      image: 'https://imgur.com/Va5iIw5.jpg'
     },
     {
       name: 'index on the beach',
-      price: 68,
-      image: 'https://imgur.com/XV2aPa2'
+      price: 22,
+      image: 'https://imgur.com/XV2aPa2.jpg'
     },
     {
       name: 'hack & coke',
-      price: 1,
-      image: 'https://imgur.com/rLOXFRI'
+      price: 15,
+      image: 'https://imgur.com/rLOXFRI.jpg'
     },
     {
       name: 'whiskey-value pair',
-      price: 11,
-      image: 'https://imgur.com/a7rmkoS'
+      price: 25,
+      image: 'https://imgur.com/a7rmkoS.jpg'
     },
     {
       name: '404 horsemen',
-      price: 202,
-      image: 'https://imgur.com/FLucOLr'
+      price: 18,
+      image: 'https://imgur.com/FLucOLr.jpg'
     },
     {
       name: 'if stateMint julep',
-      price: 2,
-      image: 'https://imgur.com/yaoK0Dg'
+      price: 14,
+      image: 'https://imgur.com/yaoK0Dg.jpg.jpg'
     },
     {
       name: 'APIPA',
-      price: 43,
-      image: 'https://imgur.com/qAhA7pi'
+      price: 20,
+      image: 'https://imgur.com/qAhA7pi.jpg'
     },
     {
       name: 'node to joy',
-      price: 56,
-      image: 'https://imgur.com/MbVdwZz'
+      price: 30,
+      image: 'https://imgur.com/MbVdwZz.jpg'
     }
   ]
 
