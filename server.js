@@ -35,10 +35,12 @@ app.get("/", (req, res) => {
     res.send("<h1>Welcome to the Gitpub App!</h1>")
 })
 
-app.get("/drinks", (req, res) => {
-    res.render("drinks/index.ejs", {drinks})
-})
 
+app.set('view engine', 'ejs'); // Set EJS as the view engine
+
+app.get('/drinks', (req, res) => {
+  res.render('index'); // Render the index.ejs file
+});
 // *****************************
 // TURNING ON SERVER LISTENER
 // WILL TELL OUR APP TO LISTEN FOR REQUESTS
