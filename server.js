@@ -35,18 +35,21 @@ app.get("/", (req, res) => {
     res.send("<h1>Welcome to the Gitpub App!</h1>")
 })
 
-app.set('view engine', 'ejs'); // Set EJS as the view engine
+// Set EJS as the view engine
+app.set("view engine", "ejs"); 
 
-
-
-app.get('/drinks', (req, res) => {
+app.get("/drinks", (req, res) => {
     // Capitalize the first letter of each drink's name
     const capitalizedDrinks = drinks.map(drink => {
       return { name: drink.name.charAt(0).toUpperCase() + drink.name.slice(1) };
     });
-  
-    res.render('index', { drinks: capitalizedDrinks }); // Pass the drinks data to index.ejs
+    // Pass the drinks data to index.ejs
+    res.render("index", { drinks: capitalizedDrinks }); 
   });
+
+  app.get("/drinks/:id", (req, res) => {
+    res.send(req.params.id)
+  })
 
 
 // *****************************
