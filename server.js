@@ -35,12 +35,20 @@ app.get("/", (req, res) => {
     res.send("<h1>Welcome to the Gitpub App!</h1>")
 })
 
-
 app.set('view engine', 'ejs'); // Set EJS as the view engine
 
+
+
 app.get('/drinks', (req, res) => {
-  res.render('index'); // Render the index.ejs file
-});
+    // Capitalize the first letter of each drink's name
+    const capitalizedDrinks = drinks.map(drink => {
+      return { name: drink.name.charAt(0).toUpperCase() + drink.name.slice(1) };
+    });
+  
+    res.render('index', { drinks: capitalizedDrinks }); // Pass the drinks data to index.ejs
+  });
+
+
 // *****************************
 // TURNING ON SERVER LISTENER
 // WILL TELL OUR APP TO LISTEN FOR REQUESTS
